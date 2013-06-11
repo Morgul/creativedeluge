@@ -1,0 +1,27 @@
+{
+    "name": "creativedeluge",
+    "version": "0.5.0",
+    "description": "A combination blog and self-publishing site designed to aid my takeover of the world.",
+    "main": "server.js",
+    "dependencies": {
+        "omega-wf": "latest",
+        "swig": "latest",
+        "brucedown": "latest"
+    },
+    "devDependencies": {
+        "mocha": "latest"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "dump": "node -e \"require('omega-wf').utils.dump()\"",
+        "sync": "node -e \"require('omega-wf').utils.sync()\"",
+        "drop": "node -e \"require('omega-wf').utils.drop()\""
+    },
+    "repository": "",
+    "keywords": [
+        "omega-wf"
+    ],
+    "author": "Christopher S. Case <chris.case@g33nxexus.com>",
+    "license": "MIT"
+}
