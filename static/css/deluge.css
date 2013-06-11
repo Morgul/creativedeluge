@@ -280,7 +280,9 @@ a.feed:hover
 }
 
 .readmore a,
-.readmore a:hover
+.readmore a:hover,
+.sidebar .panel a,
+.sidebar .panel a:hover
 {
     border-bottom: none;
 }
