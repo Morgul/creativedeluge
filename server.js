@@ -37,7 +37,7 @@ app.router.add(
         get: views.blog
     },
     {
-        url:'/*',
+        url: /^\/(?!admin\/|omega\/)(.*)/,
         get: views.flatpages
     }
 );
