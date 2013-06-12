@@ -29,11 +29,11 @@ app.router.add(
         get: views.index
     },
     {
-        url:'/article/*',
+        url:'/article/{slug}/{page}?',
         get: views.article
     },
     {
-        url:'/blog/*',
+        url:'/blog/{slug}',
         get: views.blog
     },
     {

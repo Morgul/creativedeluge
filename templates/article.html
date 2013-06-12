@@ -17,17 +17,17 @@
                 </div>
             </section>
             <section>
-                {{ article.content }}
+                {{ page.contents }}
             </section>
         </article>
         <br/>
         <div class="pagination-centered">
             <ul class="pagination">
-                <li class="arrow unavailable"><a href=""><i class="icon-double-angle-left"></i></a></li>
-                <li class="current"><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li class="arrow"><a href=""><i class="icon-double-angle-right"></i></a></li>
+                <li class="arrow{% if not page.has_previous %} unavailable{% endif %}"><a href="/article/{{ article.slug }}/{{ page.prev_page }}/"><i class="icon-double-angle-left"></i></a></li>
+                {% for num in page.paginator.page_range %}
+                    <li {% if page.pageNum == num %}class="current"{% endif %}><a href="/article/{{ article.slug }}/{{ num }}/">{{ num }}</a></li>
+                {% endfor %}
+                <li class="arrow {% if not page.has_next %} unavailable{% endif %}"><a href="/article/{{ article.slug }}/{{ page.next_page }}/"><i class="icon-double-angle-right"></i></a></li>
             </ul>
         </div>
     </div>
